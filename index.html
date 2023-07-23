@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/Bookmark-PNG-File.png">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Css/all.min.css">
+    <link rel="stylesheet" href="./Css/style.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <h1 class="head text-center m-auto">BookMarker</h1>
+      <br /><br />
+      <div class="inputform pb-5">
+        <h2 class="text-center pt-3 pb-5 fw-bold"><i class="fa-solid fa-bookmark pe-3"></i>Bookmark your favorite sites<i class="ps-3 fa-solid fa-bookmark"></i></h2>
+        <i class="fa-solid fa-book-bookmark"></i>
+        <label for="siteName" class="fw-bold ps-2">Site Name</label>
+        <input type="text"  class="form-control mb-3" id="siteName" />
+        <p class="text-danger" id="siteNameFeedback"></p>
+        <i class="fa-solid fa-link"></i>
+        <label for="siteUrl" class="ps-2 fw-bold">Site URL</label>
+        <input type="text"  class="form-control mb-3" id="siteUrl" />
+        <p class="text-danger " id="siteUrlFeedback"></p>
+        <button id="addBtn" class="mybtn btn btn-danger px-5 d-block m-auto">Submit</button>
+      </div>
+
+      <table class="table table-striped   my-5">
+        <input
+          type="text"
+          oninput="searchSite(this.value);"
+          placeholder="Search by name..."
+          class="w-75 form-control my-3 mx-auto"
+        />
+        <thead class="text-center">
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableRow" class="text-center" ></tbody>
+      </table>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
